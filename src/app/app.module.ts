@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CreateProfileComponent } from './create-profile/create-profile.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CreateProfileComponent
+    CreateProfileComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule
