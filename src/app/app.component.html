@@ -6,18 +6,21 @@
       <strong>{{title}}</strong>
     </h1>
   </div>
-  <div class="col-md-5">
+  <div class="col-md-5 loginBlock">
     <form id="myForm">
-      <div>
-        <label>Email or phone
-          <input id="loginName" name="loginName" type="email" required>
-        </label>
+      <div class="loginInputs">
+      <div class="left">
+        <div for="loginName">Email or phone</div>
+        <input id="loginName" name="loginName" type="email" required>
       </div>
-      <div>
-        <label for="password">Password</label>
+      <div class="right">
+        <div for="password">Password</div>
         <input id="password" name="password" type="password" required>
       </div>
+      </div>
+  
       <button class="loginButton">Log In</button>
+      
     </form>
   </div>
   

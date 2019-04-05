@@ -9,9 +9,29 @@
 .loginButton{
     background-color: #3B5998;
     color: white;
+    float: right;
+    position: relative;
+    top: 15px;
+}
+
+.loginBlock{
+    display: block;
+    font-size: 10px;
+}
+
+.loginInputs{
+    width: 270px;
+    float: left;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
 }
 
 #myForm{
-    display: inline-block;
-    font-size: 10px;
+    width: 335px;
 }
