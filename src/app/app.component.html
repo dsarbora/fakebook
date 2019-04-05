@@ -7,19 +7,7 @@
     </h1>
   </div>
   <div class="col-md-5 loginBlock">
-    <form id="loginForm">
-      <div class="loginInputs">
-      <div class="left">
-        <div for="loginName">Email or phone</div>
-        <input id="loginName" name="loginName" type="email" required>
-      </div>
-      <div class="right">
-        <div for="password">Password</div>
-        <input id="password" name="password" type="password" required>
-      </div>
-      </div>
-      <button class="loginButton">Log In</button>
-    </form>
+    <app-login></app-login>
   </div>
 </div>
 <div class="row">
@@ -46,9 +34,12 @@
         <option value=10>November</option>
         <option value=11>December</option>
       </select>
-      <select id="day">
-        <option *ngFor="let item of createRange(31)">{{item}}</option>
+      <!-- <select id="day">
+        <option></option>
       </select>
+      <select id="year">
+        <option></option>
+      </select> -->
     </form>
   </div>
 </div>

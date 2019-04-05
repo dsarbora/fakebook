@@ -1,0 +1,24 @@
+.loginInputs{
+    width: 270px;
+    float: left;
+}
+
+.loginButton{
+    background-color: #3B5998;
+    color: white;
+    float: right;
+    position: relative;
+    top: 15px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+#loginForm{
+    width: 335px;
+}
