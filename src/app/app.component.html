@@ -7,7 +7,7 @@
     </h1>
   </div>
   <div class="col-md-5 loginBlock">
-    <form id="myForm">
+    <form id="loginForm">
       <div class="loginInputs">
       <div class="left">
         <div for="loginName">Email or phone</div>
@@ -18,12 +18,38 @@
         <input id="password" name="password" type="password" required>
       </div>
       </div>
-  
       <button class="loginButton">Log In</button>
-      
     </form>
   </div>
-  
+</div>
+<div class="row">
+  <div class="col-md-6">
 
+  </div>
+  <div class="col-md-6">
+    <form id="newUserForm">
+      <input id="firstName" name="firstName" type="text" placeHolder="First name" required>
+      <input id="lastName" name="lastName" type="text" placeholder="Last name" required><br>
+      <input id="email" name="email" type="email" placeholder="Email" required><br>
+      <input id="newPassword" name="newPassword" type="password" placeholder="New password" required><br>
+      <select id="month">
+        <option value=0>January</option>
+        <option value=1>February</option>
+        <option value=2>March</option>
+        <option value=3>April</option>
+        <option value=4>May</option>
+        <option value=5>June</option>
+        <option value=6>July</option>
+        <option value=7>August</option>
+        <option value=8>September</option>
+        <option value=9>October</option>
+        <option value=10>November</option>
+        <option value=11>December</option>
+      </select>
+      <select id="day">
+        <option *ngFor="let item of createRange(31)">{{item}}</option>
+      </select>
+    </form>
+  </div>
 </div>
 
