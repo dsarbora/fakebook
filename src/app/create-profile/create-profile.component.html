@@ -1,33 +1,46 @@
 <div class="row">
-    <div class="col-md-6">
+  <div class="col-md-7">
+  </div>
+  <div class="col-md-5">
+    <div>
+      <h2>Create a new profile</h2>
+      <h4>Always Free</h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-7">
   
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
       <form id="newUserForm">
         <input id="firstName" name="firstName" type="text" placeHolder="First name" required>
         <input id="lastName" name="lastName" type="text" placeholder="Last name" required><br>
-        <input id="email" name="email" type="email" placeholder="Email" required><br>
-        <input id="newPassword" name="newPassword" type="password" placeholder="New password" required><br>
-        <select id="month">
-          <option value=0>January</option>
-          <option value=1>February</option>
-          <option value=2>March</option>
-          <option value=3>April</option>
-          <option value=4>May</option>
-          <option value=5>June</option>
-          <option value=6>July</option>
-          <option value=7>August</option>
-          <option value=8>September</option>
-          <option value=9>October</option>
-          <option value=10>November</option>
-          <option value=11>December</option>
-        </select>
+        <input class="long" id="email" name="email" type="email" placeholder="Email" required><br>
+        <input class="long" id="newPassword" name="newPassword" type="password" placeholder="New password" required><br>
+        <div>Birthday<br>
+          <select id="month">
+            <option value=0>January</option>
+            <option value=1>February</option>
+            <option value=2>March</option>
+            <option value=3>April</option>
+            <option value=4>May</option>
+            <option value=5>June</option>
+            <option value=6>July</option>
+            <option value=7>August</option>
+            <option value=8>September</option>
+            <option value=9>October</option>
+            <option value=10>November</option>
+            <option value=11>December</option>
+          </select>
+        </div>
         <!-- <select id="day">
           <option></option>
         </select>
         <select id="year">
           <option></option>
         </select> -->
+        <button class="btn btn-success center" id="newAccountButton">Sign up!</button>
       </form>
     </div>
   </div>

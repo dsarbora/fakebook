@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Post } from '../models/post.model';
 import { CreatePostComponent } from './create-post.component';
 
 describe('CreatePostComponent', () => {
@@ -22,4 +22,12 @@ describe('CreatePostComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a new post', () => {
+    let text = "Making a webpage.";
+    let post = new Post(text);
+    expect(post.text).toEqual(text);
+  });
 });
+
+  

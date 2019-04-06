@@ -1,0 +1,21 @@
+input{
+    margin-top: 20px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+    border: solid lightblue 1px;
+}
+
+#newUserForm{
+    width: 74%;
+}
+
+.long{
+    width: 100%;
+}
+
+#newAccountButton{
+    width: 50%;
+    margin-top: 30px;
+}
+
