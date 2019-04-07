@@ -9,3 +9,25 @@ body{
 .scaledDown7{
     width: 70%
 }
+
+.feedElement{
+    border-bottom: 1px solid black;
+    height: 150px;
+}
+
+.mainElement{
+    height: 100%;
+}
+
+.nav{
+    position: fixed;
+}
+
+.rightBar{
+    position: fixed;
+}
+
+#newsFeed{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}

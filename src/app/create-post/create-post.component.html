@@ -1,3 +1,4 @@
 <div>
-  <input id="createPost" type="text">
+  <input #createPost type="text">
+  <button (click)="createPostButtonClicked(createPost.value); createPost.value = ''">Create Post!</button>
 </div>

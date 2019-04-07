@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from '../models/post.model';
+import { Profile } from '../models/profile.model';
 
 @Component({
   selector: 'app-create-post',
@@ -7,7 +8,10 @@ import { Post } from '../models/post.model';
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent{
-  createPost(postText: string){
-    let post: Post = new Post(postText);
+  @Output() createClicked = new EventEmitter()
+
+  createPostButtonClicked(text: string){//, creator: Profile){
+    let arr = [text];//, creator];
+    this.createClicked.emit(arr);
   }
 }

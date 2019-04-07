@@ -1,3 +1,24 @@
 <div *ngIf="!loggedIn">
-<app-login></app-login>
-<app-create-profile></app-create-profile>
+  <app-login (buttonClicked)="login($event)"></app-login>
+  <app-create-profile></app-create-profile>
+</div>
+<div *ngIf="loggedIn">
+  <div class="container">
+    <div class="row">
+      <div id="nav" class="col-md-3">
+        <div class="nav">
+          <h1>NAV</h1>
+        </div>
+      </div>
+      <div id="newsFeed" class="col-md-6 mainElement">
+        <app-create-post (createClicked)="createPost($event)"></app-create-post>
+        <div class="feedElement" *ngFor="let post of masterPostList">{{post.text}}</div>
+      </div>
+      <div id="rightBar" class="col-md-3 mainElement">
+        <div class="rightBar">
+            <h1>RIGHT</h1>
+        </div>
+      </div>
+    
+  </div>
+</div>

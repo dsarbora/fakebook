@@ -7,7 +7,7 @@
       </h1>
     </div>
     <div class="col-md-5 loginBlock">
-      <form id="loginForm">
+      <div id="loginForm">
         <div class="loginInputs">
         <div class="left">
           <div for="loginName">Email or phone</div>
@@ -18,7 +18,7 @@
           <input id="password" name="password" type="password" required>
         </div>
         </div>
-        <button class="loginButton">Log In</button>
-      </form>
+        <button class="loginButton" (click)="loginButtonClicked(true)">Log In</button>
+      </div>
     </div>
   </div>
