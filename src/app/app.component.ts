@@ -25,6 +25,6 @@ export class AppComponent {
 
   createPost(arr){
     let post: Post = new Post(arr[0]);//, creator);
-    this.masterPostList.push(post);
+    this.masterPostList.unshift(post);
   }
 }
