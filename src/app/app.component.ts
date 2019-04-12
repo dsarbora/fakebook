@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { Profile } from './models/profile.model';
 import { Post } from './models/post.model';
+import { ProfileService } from './profile.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ProfileService]
 })
 export class AppComponent {
+
+  constructor(private profileService: ProfileService){}
+
   title = 'fakebook';
   loggedIn=false;
   user;
-  masterProfileList: Profile[]= [
-      {firstName: "Sandy", lastName: "Kofax", email: "skofax@fakebook.com", password: "artist2"},
-      {firstName: "Tom", lastName: "Jerry", email: "tj@fakebook.com", password: "catandmouse"},
-      {firstName: "Rachel", lastName: "Greenwood", email: "rgw@fakebook.com", password: "greenwoody"}
-  ];
+  profiles: Profile[];
 
   masterPostList: Post[] = [];
 
@@ -29,7 +30,7 @@ export class AppComponent {
   }
 
   createProfile(profile: Profile){
-    this.masterProfileList.push(profile);
-    console.log(this.masterProfileList);
+    this.profiles.push(profile);
+    console.log(this.profiles);
   }
 }
