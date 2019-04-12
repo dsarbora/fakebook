@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Profile } from './models/profile.model';
 import { Post } from './models/post.model';
 import { ProfileService } from './profile.service';
@@ -8,7 +8,7 @@ import { ProfileService } from './profile.service';
   styleUrls: ['./app.component.css'],
   providers: [ProfileService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   constructor(private profileService: ProfileService){}
 
@@ -32,5 +32,9 @@ export class AppComponent {
   createProfile(profile: Profile){
     this.profiles.push(profile);
     console.log(this.profiles);
+  }
+
+  ngOnInit(){
+    this.profiles = this.profileService.getProfiles();
   }
 }

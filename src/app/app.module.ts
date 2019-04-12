@@ -9,6 +9,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { PostListComponent } from './post-list/post-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
     AppComponent,
     LoginComponent,
     CreateProfileComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
