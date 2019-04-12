@@ -1,0 +1,7 @@
+{ "profiles": [{
+    "firstName": "John",
+    "lastName": "Wayne",
+    "email": "jwayne@fakebook.com",
+    "password": "pardner"
+}]
+}
