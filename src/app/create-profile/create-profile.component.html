@@ -13,7 +13,7 @@
   
     </div>
     <div class="col-md-5">
-      <form id="newUserForm">
+      
         <input #firstName id="firstName" name="firstName" type="text" placeHolder="First name" required>
         <input #lastName id="lastName" name="lastName" type="text" placeholder="Last name" required><br>
         <input #email class="long" id="email" name="email" type="email" placeholder="Email" required><br>
@@ -40,7 +40,7 @@
         <select id="year">
           <option></option>
         </select> -->
-        <button (click)="createNewAccount(firstName.value, lastName.value, email.value, password.value); firstName.value=''; lastName.value=''; email.value=''; password.value=''" class="btn btn-success center" id="newAccountButton">Sign up!</button>
-      </form>
+        <button (click)="createNewAccount(firstName.value, lastName.value, email.value, newPassword.value); firstName.value=''; lastName.value=''; email.value=''; newPassword.value=''" class="btn btn-success center" id="newAccountButton">Sign up!</button>
+    
     </div>
   </div>

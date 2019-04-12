@@ -11,9 +11,9 @@ export class AppComponent {
   loggedIn=false;
   user;
   masterProfileList: Profile[]= [
-      {firstName: "Sandy", lastName: "Kofax"},
-      {firstName: "Tom", lastName: "Jerry"},
-      {firstName: "Rachel", lastName: "Greenwood" }
+      {firstName: "Sandy", lastName: "Kofax", email: "skofax@fakebook.com", password: "artist2"},
+      {firstName: "Tom", lastName: "Jerry", email: "tj@fakebook.com", password: "catandmouse"},
+      {firstName: "Rachel", lastName: "Greenwood", email: "rgw@fakebook.com", password: "greenwoody"}
   ];
 
   masterPostList: Post[] = [];
@@ -26,5 +26,10 @@ export class AppComponent {
   createPost(arr){
     let post: Post = new Post(arr[0]);//, creator);
     this.masterPostList.unshift(post);
+  }
+
+  createProfile(profile: Profile){
+    this.masterProfileList.push(profile);
+    console.log(this.masterProfileList);
   }
 }
