@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Profile } from '../models/profile.model';
 
 @Component({
   selector: 'app-create-profile',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
 })
 export class CreateProfileComponent {
 
-  // createNewAccount(firstName: string, lastName: string, email: string, password: string){
-  //   let newProfile = new Profile(firstName, lastName, email, password);
+  @Output() profileCreated = new EventEmitter();
 
-//  }
+  createNewAccount(firstName: string, lastName: string, email: string, password: string){
+    let newProfile = new Profile(firstName, lastName, email, password);
+    this.profileCreated.emit(newProfile);
+ }
 
 }

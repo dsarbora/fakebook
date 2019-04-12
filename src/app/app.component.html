@@ -1,6 +1,6 @@
 <div *ngIf="!loggedIn">
   <app-login (buttonClicked)="login($event)"></app-login>
-  <app-create-profile></app-create-profile>
+  <app-create-profile (profileCreated)="createProfile($event)"></app-create-profile>
 </div>
 <div *ngIf="loggedIn">
   <div class="container">

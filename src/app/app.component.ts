@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'fakebook';
   loggedIn=false;
   user;
-  masterProfilesList: Profile[]= [
+  masterProfileList: Profile[]= [
       {firstName: "Sandy", lastName: "Kofax"},
       {firstName: "Tom", lastName: "Jerry"},
       {firstName: "Rachel", lastName: "Greenwood" }

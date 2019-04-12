@@ -40,7 +40,7 @@
         <select id="year">
           <option></option>
         </select> -->
-        <button class="btn btn-success center" id="newAccountButton">Sign up!</button>
+        <button (click)="createNewAccount(firstName.value, lastName.value, email.value, password.value); firstName.value=''; lastName.value=''; email.value=''; password.value=''" class="btn btn-success center" id="newAccountButton">Sign up!</button>
       </form>
     </div>
   </div>
