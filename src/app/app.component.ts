@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
 
   title = 'fakebook';
   loggedIn=false;
-  user;
+  user: Profile;
   profiles: FirebaseListObservable<any[]>;
 
   masterPostList: Post[] = [];

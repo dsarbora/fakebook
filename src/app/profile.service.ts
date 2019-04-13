@@ -15,4 +15,8 @@ export class ProfileService {
   getProfiles(){
     return this.profiles;
   }
+
+  addProfile(newProfile: Profile){
+    this.profiles.push(newProfile);
+  }
 }
