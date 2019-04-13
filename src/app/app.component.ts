@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Profile } from './models/profile.model';
 import { Post } from './models/post.model';
 import { ProfileService } from './profile.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +17,7 @@ export class AppComponent implements OnInit{
   title = 'fakebook';
   loggedIn=false;
   user;
-  profiles: Profile[];
+  profiles: FirebaseListObservable<any[]>;
 
   masterPostList: Post[] = [];
 
