@@ -8,8 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class LoginComponent{
   @Output() buttonClicked = new EventEmitter();
 
-  loginButtonClicked(bool){
+  loginButtonClicked(username, password){
+    let loginInfo: string[] = [username, password];
     console.log("Login button clicked");
-    this.buttonClicked.emit(bool);
+    this.buttonClicked.emit(loginInfo);
   }
 }

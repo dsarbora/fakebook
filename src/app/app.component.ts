@@ -21,9 +21,19 @@ export class AppComponent implements OnInit{
 
   masterPostList: Post[] = [];
 
-  login(bool){
+  login(loginInfo){
     console.log("Logging in");
-    this.loggedIn=bool;
+    let count=0;
+    this.profiles.forEach(function(profile){
+      count++;
+    })
+    for(let i=0; i<count; i++){
+      if(this.profiles[i].email==loginInfo[0]&&this.profiles[i].password==loginInfo[1]){
+        this.loggedIn=true;
+        return;
+      }
+    }
+    alert("Incorrect username/password combination");
   }
 
   createPost(arr){

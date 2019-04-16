@@ -10,15 +10,15 @@
       <div id="loginForm">
         <div class="loginInputs">
         <div class="left">
-          <div for="loginName">Email or phone</div>
+          <div #loginName for="loginName">Email or phone</div>
           <input id="loginName" name="loginName" type="email" required>
         </div>
         <div class="right">
           <div for="password">Password</div>
-          <input id="password" name="password" type="password" required>
+          <input #password id="password" name="password" type="password" required>
         </div>
         </div>
-        <button class="loginButton" (click)="loginButtonClicked(true)">Log In</button>
+        <button class="loginButton" (click)="loginButtonClicked(loginName.value, password.value); loginName.value=''; password.value='';">Log In</button>
       </div>
     </div>
   </div>
