@@ -16,20 +16,23 @@ export class AppComponent implements OnInit{
 
   title = 'fakebook';
   loggedIn=false;
-  user: Profile;
+  user;
   profiles: FirebaseListObservable<any[]>;
 
   masterPostList: Post[] = [];
 
-  login(loginInfo){
-    console.log("Logging in");
-    let count=0;
-    this.profiles.forEach(function(profile){
-      count++;
-    })
-    for(let i=0; i<count; i++){
-      if(this.profiles[i].email==loginInfo[0]&&this.profiles[i].password==loginInfo[1]){
+  login(loginInfo){    
+    let profileList: any[] = [];
+    this.profiles.subscribe(snapshot => {
+      snapshot.forEach(profile =>{
+      profileList.push(profile)
+      });
+    });
+    for(var i=0; i<profileList.length; i++){
+      if(profileList[i].email==loginInfo[0]&&profileList[i].password==loginInfo[1]){
         this.loggedIn=true;
+        this.user = profileList[i];
+        console.log(this.user);
         return;
       }
     }
@@ -37,7 +40,8 @@ export class AppComponent implements OnInit{
   }
 
   createPost(arr){
-    let post: Post = new Post(arr[0]);//, creator);
+    console.log(this.user);
+    let post: Post = new Post(arr[0], this.user);//, creator);
     this.masterPostList.unshift(post);
   }
 

@@ -16,6 +16,10 @@ export class ProfileService {
     return this.profiles;
   }
 
+  getProfileById(userId: string){
+    return this.database.object('profiles/' + userId);
+  }
+
   addProfile(newProfile: Profile){
     this.profiles.push(newProfile);
   }

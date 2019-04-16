@@ -1,6 +1,7 @@
 <div *ngIf="!loggedIn">
   <app-login (buttonClicked)="login($event)"></app-login>
   <app-create-profile (profileCreated)="createProfile($event)"></app-create-profile>
+  <div *ngFor="let profile of profiles | async">{{profile.firstName}}{{profile.lastName}}{{profile.email}}{{profile.password}}</div>
 </div>
 <div *ngIf="loggedIn">
   <div class="container">
@@ -12,7 +13,7 @@
       </div>
       <div id="newsFeed" class="col-md-6 mainElement">
         <app-create-post (createClicked)="createPost($event)"></app-create-post>
-        <div class="feedElement" *ngFor="let post of masterPostList">{{post.text}}</div>
+        <div class="feedElement" *ngFor="let post of masterPostList">{{post.creator.firstName}} {{post.creator.lastName}}: {{post.text}}</div>
       </div>
       <div id="rightBar" class="col-md-3 mainElement">
         <div class="rightBar">
