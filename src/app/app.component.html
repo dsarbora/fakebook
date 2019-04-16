@@ -13,7 +13,7 @@
       </div>
       <div id="newsFeed" class="col-md-6 mainElement">
         <app-create-post (createClicked)="createPost($event)"></app-create-post>
-        <div class="feedElement" *ngFor="let post of masterPostList">{{post.creator.firstName}} {{post.creator.lastName}}: {{post.text}}</div>
+        <div class="feedElement" *ngFor="let post of posts | async | reverse">{{post.creator.firstName}} {{post.creator.lastName}}: {{post.text}}</div>
       </div>
       <div id="rightBar" class="col-md-3 mainElement">
         <div class="rightBar">

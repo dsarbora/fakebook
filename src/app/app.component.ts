@@ -2,24 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { Profile } from './models/profile.model';
 import { Post } from './models/post.model';
 import { ProfileService } from './profile.service';
+import { PostService } from './post.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ProfileService]
+  providers: [
+    ProfileService,
+    PostService
+  ]
 })
 export class AppComponent implements OnInit{
 
-  constructor(private profileService: ProfileService){}
+  constructor(private profileService: ProfileService, private postService: PostService){}
 
   title = 'fakebook';
   loggedIn=false;
   user;
   profiles: FirebaseListObservable<any[]>;
 
-  masterPostList: Post[] = [];
+  posts: FirebaseListObservable<any[]>;
 
   login(loginInfo){    
     let profileList: any[] = [];
@@ -41,8 +45,8 @@ export class AppComponent implements OnInit{
 
   createPost(arr){
     console.log(this.user);
-    let post: Post = new Post(arr[0], this.user);//, creator);
-    this.masterPostList.unshift(post);
+    let post: Post = new Post(arr[0], this.user);
+    this.postService.createPost(post);
   }
 
   createProfile(profile: Profile){
@@ -52,5 +56,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.profiles = this.profileService.getProfiles();
+    this.posts = this.postService.getPosts();
   }
 }

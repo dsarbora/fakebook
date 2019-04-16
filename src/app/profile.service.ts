@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Profile } from './models/profile.model';
-import { PROFILES } from './mock-profiles';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 

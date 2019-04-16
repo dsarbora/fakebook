@@ -10,6 +10,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { PostListComponent } from './post-list/post-list.component';
+import { ReversePipe } from './reverse.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     LoginComponent,
     CreateProfileComponent,
     CreatePostComponent,
-    PostListComponent
+    PostListComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

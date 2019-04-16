@@ -10,8 +10,8 @@ import { Profile } from '../models/profile.model';
 export class CreatePostComponent{
   @Output() createClicked = new EventEmitter()
 
-  createPostButtonClicked(text: string){//, creator: Profile){
-    let arr = [text];//, creator];
+  createPostButtonClicked(text: string){
+    let arr = [text];
     this.createClicked.emit(arr);
   }
 }

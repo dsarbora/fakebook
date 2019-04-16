@@ -15,7 +15,7 @@ export class PostService {
    }
 
    getPostById(){
-     
+
    }
 
    createPost(newPost: Post){
