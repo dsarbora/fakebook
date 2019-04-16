@@ -3,5 +3,14 @@
     "lastName": "Wayne",
     "email": "jwayne@fakebook.com",
     "password": "pardner"
-}]
+}],
+  "posts": [{
+      "text": "Just had lunch.",
+      "creator": {
+        "firstName": "John",
+        "lastName": "Wayne",
+        "email": "jwayne@fakebook.com",
+        "password": "pardner"
+      }
+  }]
 }
