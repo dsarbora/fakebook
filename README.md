@@ -5,20 +5,55 @@ A clone of a popular website for educational purposes.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Specifications
-|Feature |Create|Read|Update|Destroy|Pipes|
-|-------:|:----:|:--:|:----:|:-----:|:----|
-|Profiles|0     |0   |0     |0      |0    |
-|Posts   |0     |0   |0     |0      |0    |
-|Messages|0     |0   |0     |0      |0    |
-|Like    |0     |0   |0     |0      |0    |
+#### Login Page
 
-#### Components
-This cod
+* Users are able to create a profile by filling in the fields underneath the blue banner on the righthand side of the page and clicking the green "Create Profile" button.
+* User information is sent to database upon account creation.
+* Users are able to login by entering their credentials in the fields on the right side of the blue bar on the top of the screen and clicking the blue login button.
 
-Profile Features:
-Add Friend
+#### Homepage
 
+* Users are able to create a post and see it displayed in their newsfeed by typing their content in the text field and pressing the "Post" button.
+* Posts are sent to database when posted.
+* Posts are tied to users and display their creator's first and last name.
+* Posts are ordered in the newsfeed by time of creation.
 
+#### Future Specifications
+
+* Users will be able to like their favorite posts, and their likes will be sent to the database as properties of the specific post.
+* Usernames will show up as a link that will route to a profile page where public information about the profile's owner will be available on screen.
+* Users will be able to add and edit information about themselves in their own profile page.
+* Users will be able to form friendships, and only posts created by their friends will be visible in their newsfeed.
+* Users will be able to form groups that others can join, and these groups will contain their own set of posts that only group members can see regardless of their friendship status.
+* Users will be able to "share" posts made by other users. Sharing a post will duplicate the original creators post inside a second post created by the sharer.
+
+## Setup/Installation Requirements
+* Download and install Angular and Node Package Manager.
+* Create a file called `api-keys.ts` in the `src/app/` folder.
+* Create a Firebase RealTimeDatabase for this project and store the configuration object details in the new api-keys.ts file. The file's contents should look something like this, with your own configuration strings replacing the X's:
+
+```javascript
+export const masterFirebaseConfig = {
+  apiKey: XXX,
+  authDomain: XXX,
+  databaseURL: XXX,
+  storageBucket: XXX,
+  messagingSenderId: XXX
+};
+```
+
+* It is important that the object should be exported and named `masterFirebaseConfig.`
+
+* Navigate to the project's root directory in your command line.
+* Run the command `npm install`
+* When the necessary packages have finished installing, run the command `npm serve --open` and the project should build and open in your browser.
+
+## Known Bugs
+
+This project was built to learn Angular. It will be a work in progress for some time and will always be used to learn new features. Any bugs are treated as an opportunity to fix the project on the fly, so none are known, and when they are it's the author's aim to fix them immediately. That said, two things come to mind:
+
+* Although not really a bug, most of the planned features of the website are incomplete.
+* User authentication, while functional, is not secure and it is NOT recommended that a user uses any real passwords to create a profile on this website.
 
 ## Development server
 

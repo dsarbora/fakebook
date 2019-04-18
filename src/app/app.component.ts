@@ -44,9 +44,10 @@ export class AppComponent implements OnInit{
   }
 
   createPost(arr){
-    console.log(this.user);
-    let post: Post = new Post(arr[0], this.user);
-    this.postService.createPost(post);
+    if(arr[0]){
+      let post: Post = new Post(arr[0], this.user);
+      this.postService.createPost(post);
+    }
   }
 
   createProfile(profile: Profile){
@@ -56,6 +57,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.profiles = this.profileService.getProfiles();
+    console.log(this.profiles);
     this.posts = this.postService.getPosts();
   }
 }

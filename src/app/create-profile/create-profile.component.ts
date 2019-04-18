@@ -15,8 +15,13 @@ export class CreateProfileComponent {
   constructor(private profileService: ProfileService){}
 
   createNewAccount(firstName: string, lastName: string, email: string, password: string){
-    let newProfile = new Profile(firstName, lastName, email, password);
-    this.profileService.addProfile(newProfile);
- }
-
+    if(firstName&&lastName&&email&&password){
+      let newProfile = new Profile(firstName, lastName, email, password);
+      this.profileService.addProfile(newProfile);
+      alert(`Hi ${firstName} ${lastName}, your new account email is ${email} and your password is ${password}.`);
+    }
+    else{
+      alert("Please fill out all fields");
+    }
+  }
 }
