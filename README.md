@@ -5,6 +5,7 @@ A clone of a popular website for educational purposes.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Specifications
+This project is deployed at `https://fakebook-48e63.firebaseapp.com`
 #### Login Page
 
 * Users are able to create a profile by filling in the fields underneath the blue banner on the righthand side of the page and clicking the green "Create Profile" button.
